@@ -163,7 +163,7 @@ impl Obstacle {
 
     fn render(&mut self, ctx: &mut BTerm, player_x: i32) {
         let screen_x = self.x - player_x;
-        let half_size = self.size;
+        let half_size = self.size / 2;
         for y in 0..self.gap_y - half_size {
             ctx.set(screen_x, y, RED, BLACK, to_cp437('|'));
         }
